@@ -1,0 +1,58 @@
+header a {
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+	color: inherit;
+}
+
+header a img {
+	height: 10svh;
+}
+
+footer ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+article ul {
+	display: flex;
+	flex-direction: row;
+	padding: 0px;
+}
+
+article ul li {
+	padding-right: 1svw;
+}
+
+h3 {
+	font-weight: inherit;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.learningSections {
+	font-weight: normal;
+}
+
+.learningSections span {
+	font-style: italic;
+}
+
+.learningSections a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.learningSections a article {
+	border-bottom: lightgrey solid 2px;
+}
+
+.learningSections ul {
+	display: flex;
+	flex-direction: row;
+	padding: 0px;
+	margin: 0px;
+}
