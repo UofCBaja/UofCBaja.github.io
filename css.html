@@ -8,7 +8,7 @@
 		<meta
 			name="description"
 			content="UofC Baja html Reference" />
-		<title>darkicewolf50 - blogs</title>
+		<title>UCalgary Baja - CSS</title>
 		<link
 			rel="stylesheet"
 			href="./style.css" />
@@ -21,8 +21,8 @@
 				<h1>UCalgary Baja</h1>
 			</a>
 		</header>
-		<article>
-			<h1>HTML</h1>
+		<div>
+			<h1>CSS</h1>
 			<p>
 				<span>Brock</span>
 				- <time>2025/03/01</time>
@@ -32,11 +32,228 @@
 				<li>#css</li>
 				<li>#ucalgarybaja</li>
 			</ul>
-			<p>
-				Cascading Sytle Sheets or CSS is a way to style your web pages. This
-				stylizing has two components the selector and the "action" section.
-			</p>
-		</article>
+			<article>
+				<p>
+					CSS or Cascading Style Sheets is a language that is commonly used to
+					stye html elements. It is a very powerful language with the ability to
+					animate, respond to user input and the display format of the
+					webpage/web app.
+				</p>
+				<p>
+					The first most important thing to understand is that there are two
+					parts of most CSS statements.
+				</p>
+				<ol>
+					<li>The Selector</li>
+					<li>The “Statement” or what it does.</li>
+				</ol>
+				<p>We will first look into the Selector.</p>
+				<h2>Selector</h2>
+				<p>
+					The most important thing to note about a webpage is that there are
+					levels of specificity, the bottom and least specific is the DOM
+					(Document Object Model) or the file itself. Next is a Class and
+					Finally is an ID. In the selector this is not mutually exclusive.
+				</p>
+				<p>For example you could have a selector like this</p>
+				<code>
+					div .class-example #id-example { <br />
+					// -- snip --
+				</code>
+				<p>
+					The first thing to note is that the selector section is before the
+					<code>{}</code> (inside these is where the Statement goes). All
+					selections are separated by a space.
+				</p>
+				<p>
+					Next thing to noice is that this species that inside a div there is a
+					element with a class of “class-exmaple” that also contains an element
+					with an id of “id-example”.
+				</p>
+				<p>
+					Html or DOM elements are denoted by the name of the html tag, I
+					commonly use them after a class or id.
+				</p>
+				<p>
+					Classes are the second most specific level, meaning that they will
+					override just a DOM specification's statement.
+				</p>
+				<p>
+					They are denoted by a . in css and are defined on a html tag using the
+					<code>class=”nameOfClass”</code> inside the opening html tag.
+				</p>
+				<p>Classes are used to specify multiple html tags.</p>
+				<p>
+					Ids are the most specific level, which means that an id’s statement
+					will override any conflicting DOM or Classes’ statement.
+				</p>
+				<p>
+					They are denoted by a # in css and are defined on a html tag using the
+					<code>id="nameOfId"</code> inside the opening tag.
+				</p>
+				<p>
+					Ids should be used to specify unique elements on a page, but this is
+					only convention. There is nothing stopping you from using it as if it
+					were a class to denote multiple html tags.
+				</p>
+				<p>Here is one final example of a css selector used on this website</p>
+				<code>
+					.learningSections a article { <br />
+					// -- snip -- <br />
+					}
+				</code>
+				<p>
+					Here you can see that first we look for the element containing the
+					class learningSections, then inside that tag we are looking for the a
+					tag which contains an article tag.
+				</p>
+				<p>
+					Once we have found that article tag we can perform the statement on
+					it.
+				</p>
+				<p>
+					One final note, in inspect element you can copy the css path to any
+					element if you are in the elements tab and right click
+				</p>
+				<h2>Statement</h2>
+				<p>
+					Now we now know to select which html element we want to perform
+					something on we can now move onto the statement part of the html
+				</p>
+				<p>
+					Keep in mind that this will not go over all of the statements, just
+					some particularly useful ones.
+				</p>
+				<p>
+					First thing is first the most useful debugging the background colour.
+					This is done by adding
+				</p>
+				<code
+					>// -- snip -- <br />
+					background-color: red; <br />
+					// it continues <br />
+					// -- snip --
+				</code>
+				<p>
+					Note that this doesn't need to be a specific colour but vscode gives
+					suggestions and you can also use a hex colour.
+				</p>
+				<h3>Flex Boxes</h3>
+				<p>
+					This is one of the ways to display content and is commonly used to
+					move our elements into a certain place.
+				</p>
+				<p>To start, add display: flex; to the statement.</p>
+				<p>
+					Now any of the immediate child elements can be moved into the correct
+					position, grown or shrunk automatically.
+				</p>
+				<p>
+					The parent element or the one with the display: flex; will grow to fix
+					all of the elements and take up the whole width of the page.
+				</p>
+				<p>
+					First thing to note is that justify-content controls the horizontal
+					movement of any content. Align-items controls the vertical movement of
+					the content.
+				</p>
+				<p>
+					In combination you can almost control where vertically or horizontally
+					the object should go.
+				</p>
+				<p>
+					Flexboxes can also control the order in which content should be
+					displayed.
+				</p>
+				<p>
+					With flex-direction you can set it to column or row In the case of row
+					the content will start with the first element, then the next beside it
+					and so on.
+				</p>
+				<p>
+					In the case of column, this is used to convert back any sub-children
+					of the flex that also are flexes themselves as the flex-direction
+					statement is inherited by any children.
+				</p>
+				<h3>Padding, Border and Margin</h3>
+				<p>
+					These three properties can be used to move the internal content away
+					from another element.
+				</p>
+				<p>
+					While they may seem to all do the same thing, margin and padding move
+					elements and border is generally used to write an element with a line
+					or dotted line of some kind.
+				</p>
+				<p>
+					Margin effects outside the element while padding adds to inside the
+					element, this affects the border’s position relative to the element.
+				</p>
+				<p>Borders are generally created with border: solid black 1px;</p>
+				<p>
+					This will create a solid line that is black with that is 1px wide.
+				</p>
+				<p>
+					Some elements have built in margin or padding so it is sometimes
+					useful to remove them or to add them later.
+				</p>
+				<p>This is done by</p>
+				<code>
+					// -- snip --<br />
+					padding: 0px;<br />
+					margin: 0px;<br />
+					// -- snip --
+				</code>
+				<p>This removes any padding or margin from the selected element.</p>
+				<h3>Height and Width</h3>
+				<p>
+					These two properties are very important for determining exactly how
+					wide an element should be.
+				</p>
+				<p>
+					Generally you should use the flexbox to handle that but this is most
+					useful on images to determine exactly how tall and wide it should be.
+				</p>
+				<p>
+					Generally you should use the flexbox to handle that but this is most
+					useful on images to determine exactly how tall and wide it should be.
+				</p>
+				<p>
+					Instead of using a percentage or a pixel count to determine how tall
+					or wide something is, this gives a non changing amount that it should
+					be.
+				</p>
+				<p>
+					The reason why we use svh or svw instead of vh (view height) or vw
+					(view width) is due to how mobile browsers behave.
+				</p>
+				<p>
+					When a mobile browser removes the url bar this will affect the vh
+					causing elements to move, this is very annoying and an unwanted
+					behavior.
+				</p>
+				<p>
+					So instead we use the static version. 100vh is equivalent to one page
+					and the same with svw. This is very useful to keep in mind when you
+					want to create something with a certain height.
+				</p>
+				<p>
+					We also use a percentage or a px because these are inconsistent on
+					every single way of viewing a page. 10 px on a 4k monitor is a lot
+					smaller than 10px on a phone screen.
+				</p>
+				<p>
+					A percentage can be used but this is also inconsistent as 40% on an
+					ultrawide screen is very very different to a vertical phone screen.
+				</p>
+				<p>This is not finished, these are hundreds more more items.</p>
+				<p>
+					If you need more resources please see
+					<a href="https://www.w3schools.com/css/">w3schools.com</a> as it has
+					many excellent resources on all of these topics.
+				</p>
+			</article>
+		</div>
 
 		<footer>
 			<ul>
